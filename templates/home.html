@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <!-- Starts image section -->
+    <div class="container">
+        <p><h2>Wer hat den Tweet geschrieben?</h2></p>
+   
+        <h3> Das Model im Einsatz</h3>
+  
+    
+
+    
+    <!-- Starts form section -->
+    <div class="form-container ">
+        <form class="form-horizontal" action = "/predict/" method="post">
+        
+            <div class="form-group row">
+              <label class="control-label col-sm-2" for="text">Tweet-Inhalt:</label>
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="text" name="text">
+              </div>
+            </div>
+             <p>Vorhersage:</p>
+            <label class="control-label">&nbsp;</label>                
+            <input type="submit" name="submit_button" value="Logistische Regression">
+            <input type="submit" name="submit_button" value="Bert-Model">
+          </form>
+        <!-- Ends form section -->
+        
+        
+    </div>  </div>
+
+
+{% endblock %}
